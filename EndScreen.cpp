@@ -45,7 +45,7 @@ EndScreen::EndScreen(sf::Vector2i v, bool finished, std::string name) {
 void EndScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(background);
     target.draw(nameEnd);
-    target.draw(retry);
+//    target.draw(retry);
 }
 
 const sf::Text &EndScreen::getRetry() const {

@@ -20,6 +20,7 @@ public:
 private:
     static bool hitDetection(const Bird& bird, const Pipes& pipes);
     static bool finish(const Bird& bird, const Pipes& pipes);
+    bool retry(const EndScreen& endScreen, const sf::RenderTarget &window, sf::Event event);
 };
 
 

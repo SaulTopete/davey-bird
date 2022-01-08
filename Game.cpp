@@ -67,14 +67,6 @@ void Game::run() {
             EndScreen endScreen(window.getPosition(), finished, typing.getWord());
             endScreen.draw(window, states);
             fileTree.draw(window, states);
-            if(MouseEvents<sf::Text>::mouseClicked(window, event)){
-                if(endScreen.getRetry().getGlobalBounds().contains
-                (MouseEvents<sf::Text>::get_mouse_pos(window, event).x, MouseEvents<sf::Text>::get_mouse_pos(window, event).y)){
-
-                }
-
-
-            }
         }
 
         window.display();
@@ -130,6 +122,17 @@ bool Game::hitDetection(const Bird& bird, const Pipes& pipes) {
 bool Game::finish(const Bird &bird, const Pipes &pipes) {
     if(bird.getBird().getPosition().x > pipes.getEndLine().getPosition().x){
         return true;
+    }
+    return false;
+}
+
+bool Game::retry(const EndScreen& endScreen, const sf::RenderTarget &window, sf::Event event) {
+    if(MouseEvents<sf::Text>::mouseClicked((sf::RenderWindow &) window, event)){
+        if(endScreen.getRetry().getGlobalBounds().contains
+                (MouseEvents<sf::Text>::get_mouse_pos((sf::RenderWindow &) window, event).x, MouseEvents<sf::Text>::get_mouse_pos(
+                        (sf::RenderWindow &) window, event).y)){
+            return true;
+        }
     }
     return false;
 }

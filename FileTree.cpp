@@ -16,12 +16,12 @@ void FileTree::addEventHandler(sf::RenderWindow &window, sf::Event event) {
 }
 
 void FileTree::draw(sf::RenderTarget &window, sf::RenderStates states) const {
-    if(clickedList1)
-        list.draw(window, states);
-    if(hover){
-        list.draw(window, states);
-    }
-    menuDropdown1.draw(window, states);
+//    if(clickedList1)
+//        list.draw(window, states);
+//    if(hover){
+//        list.draw(window, states);
+//    }
+//    menuDropdown1.draw(window, states);
 }
 
 void FileTree::checkForClick(sf::RenderWindow &window, sf::Event event) {
