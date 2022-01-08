@@ -12,7 +12,7 @@ Game::Game(){
 void Game::run() {
     bool hit, finished;
     bool pressedEnter = false;
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Box Thingy");
+    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Davey Bird");
     window.setFramerateLimit(60);
     sf::RenderStates states;
 
